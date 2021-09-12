@@ -26,13 +26,14 @@
 }
 
 .slick-prev{
-    left: 1% !important;
-    z-index: 1;
-    
+    left: 0 !important;
+    z-index: 5;
+    padding-left: 5px;
 }
 
 .slick-next{
-    right: 1% !important;
-    z-index: 1;
+    right: 0 !important;
+    z-index: 5;
+    padding-left: 5px;
 }
 
