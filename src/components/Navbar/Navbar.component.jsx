@@ -5,11 +5,11 @@ import { GiHamburgerMenu } from "react-icons/gi";
 const NavSm = () => {
   return (
     <>
-      <div className="flex justify-between items-center ">
-        <div>
-          <h1 className="text-2xl font-bold text-white">It all starts here</h1>
-          <span className="flex items-center text-sm text-gray-400">
-            Varanasi <BiChevronRight />
+      <div className="flex justify-between items-center">
+        <div className="flex flex-col items-start gap-1">
+          <h1 className="text-2xl font-bold text-white">It All Starts Here!</h1>
+          <span className="flex items-center text-xs text-gray-300 pl-0.5">
+            Varanasi <BiChevronRight className="" />
           </span>
         </div>
         <div className="text-3xl text-white">

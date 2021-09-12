@@ -1,7 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 
 const SimpleSlider = () => {
   const settingsLg = {
@@ -21,7 +20,7 @@ const SimpleSlider = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    className: "overflow-hidden",
+    className: "overflow-hidden focus:outline-none",
   };
 
   const images = [
@@ -34,7 +33,9 @@ const SimpleSlider = () => {
 
   return (
     <>
-      <div className="lg:hidden mt-1">
+      <div
+        className="lg:hidden mt-1"
+      >
         <Slider {...settingsSm}>
           {images.map((image) => (
             <div className="w-full h-44 md:h-96">
@@ -43,11 +44,17 @@ const SimpleSlider = () => {
           ))}
         </Slider>
       </div>
-      <div className="hidden lg:block mt-1">
+      <div
+        className="hidden lg:block mt-1"
+      >
         <Slider {...settingsLg}>
           {images.map((image) => (
             <div className="w-full h-96 px-1">
-              <img src={image} alt="testing" className="w-full h-full rounded-md" />
+              <img
+                src={image}
+                alt="testing"
+                className="w-full h-full rounded-md"
+              />
             </div>
           ))}
         </Slider>
