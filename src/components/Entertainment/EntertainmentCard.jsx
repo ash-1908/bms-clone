@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import { PrevArrow, NextArrow } from "../CarousalArrows/index";
 
 const EntertainmentCard = (props) => {
   return (
@@ -23,6 +24,8 @@ const EntertainmentCardSlider = () => {
     infinite: false,
     slidesToShow: 5,
     slidesToScroll: 5,
+    prevArrow: <PrevArrow top="top-24" />,
+    nextArrow: <NextArrow top="top-24" />,
     responsive: [
       {
         breakpoint: 1024,

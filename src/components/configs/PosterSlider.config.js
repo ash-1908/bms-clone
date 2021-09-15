@@ -1,7 +1,11 @@
+import {PrevArrow, NextArrow} from "../CarousalArrows/index"
+
 export const settings = {
   speed: 600,
   initialSlide: 0,
   arrows: true,
+  prevArrow: <PrevArrow top="top-32" />,
+  nextArrow: <NextArrow top="top-32" />,
   pauseOnHover: true,
   pauseOnDotsHover: true,
   infinite: false,

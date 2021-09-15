@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-
+import { PrevArrow, NextArrow } from "../CarousalArrows/index";
 
 const SimpleSlider = () => {
   const settingsLg = {
@@ -13,6 +13,8 @@ const SimpleSlider = () => {
     centerPadding: "200px",
     className: "overflow-hidden",
     arrows: true,
+    prevArrow: <PrevArrow top="top-44" hero="true" />,
+    nextArrow: <NextArrow top="top-44" hero="true" />,
   };
 
   const settingsSm = {
