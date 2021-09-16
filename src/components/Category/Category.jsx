@@ -1,11 +1,11 @@
 import React from 'react'
 
 
-const Category = () => {
+const Category = (props) => {
     return (
       <div
         id="cat"
-        className="lg:hidden bg-bms-800 py-2 px-3 text-xs md:text-sm w-full overflow-y-scroll"
+        className={`${props.className} bg-bms-800 py-2 px-3 text-xs md:text-sm w-full overflow-y-scroll`}
       >
         <div className="md:pl-2 lg:w-5/6 flex mx-auto justify-between">
           <div className="text-gray-400 w-full">

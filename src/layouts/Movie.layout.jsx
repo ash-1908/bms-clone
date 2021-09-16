@@ -1,12 +1,12 @@
 import React from "react";
-import Navbar from "../Components/Navbar/Navbar.component";
+import MovieNav from "../Components/Navbar/MovieNav.component";
 import Category from "../Components/Category/Category";
 
 const MovieLayout = (props) => {
   return (
     <div>
-      <Navbar />
-      <Category />
+      <MovieNav title={props.title} />
+      <Category className="hidden lg:flex" />
       {props.children}
     </div>
   );
