@@ -21,7 +21,7 @@ const MovieHero = () => {
           <div className="absolute w-full h-full" />
           <img src={image.src} alt={image.alt} className="w-full h-full" />
         </div>
-        
+
         <div
           className="relative hidden lg:block"
           style={{ height: "75vh", width: "100vw" }}
@@ -34,8 +34,8 @@ const MovieHero = () => {
             }}
           />
 
-          <div className="absolute z-30 top-10 left-24 flex items-start">
-            <div className="w-80 mr-5">
+          <div className="absolute z-30 top-14 left-32 flex items-start h-96">
+            <div className="w-72 h-full mr-10">
               <img
                 src="https://in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/thalaivi-et00097273-07-09-2021-02-51-12.jpg"
                 alt="poster"
@@ -43,7 +43,7 @@ const MovieHero = () => {
               />
             </div>
             <div>
-                <MovieInfo />
+              <MovieInfo />
             </div>
           </div>
           <img src={image.src} alt={image.alt} className="w-full h-full" />
