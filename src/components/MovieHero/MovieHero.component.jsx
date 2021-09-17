@@ -6,22 +6,28 @@ const MovieHero = () => {
   return (
     <>
       <div>
+        {/* Small screen */}
         <div
           className="relative md:hidden w-full"
           style={{ height: "100vh", width: "100vw" }}
         >
-          <div className="absolute z-10 bottom-0 bg-opacity-50 bg-black w-full h-52" />
+          <div className="p-3 absolute z-10 bottom-0 bg-opacity-50 bg-black w-full h-52">
+            <MovieInfo />
+          </div>
           <img src={image.src} alt={image.alt} className="w-full h-full" />
         </div>
+        {/* Medium screen */}
         <div
           className="relative hidden md:block lg:hidden"
           style={{ height: "100vh", width: "100vw" }}
         >
-          <div className="absolute z-10 bottom-0 bg-opacity-50 bg-black w-full h-52" />
+          <div className="p-4 absolute z-10 bottom-0 bg-opacity-50 bg-black w-full h-52">
+            <MovieInfo />
+          </div>
           <div className="absolute w-full h-full" />
           <img src={image.src} alt={image.alt} className="w-full h-full" />
         </div>
-
+        {/* Large screen */}
         <div
           className="relative hidden lg:block"
           style={{ height: "75vh", width: "100vw" }}
