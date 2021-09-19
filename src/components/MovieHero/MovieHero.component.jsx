@@ -9,7 +9,7 @@ const MovieHero = () => {
         {/* Small screen */}
         <div
           className="relative md:hidden w-full"
-          style={{ height: "100vh", width: "100vw" }}
+          style={{ height: "100vh"}}
         >
           <div className="p-3 absolute z-10 bottom-0 bg-opacity-50 bg-black w-full h-52">
             <MovieInfo />
@@ -18,8 +18,8 @@ const MovieHero = () => {
         </div>
         {/* Medium screen */}
         <div
-          className="relative hidden md:block lg:hidden"
-          style={{ height: "100vh", width: "100vw" }}
+          className="relative hidden md:block lg:hidden w-full"
+          style={{ height: "100vh"}}
         >
           <div className="p-4 absolute z-10 bottom-0 bg-opacity-50 bg-black w-full h-52">
             <MovieInfo />
@@ -29,8 +29,8 @@ const MovieHero = () => {
         </div>
         {/* Large screen */}
         <div
-          className="relative hidden lg:block"
-          style={{ height: "75vh", width: "100vw" }}
+          className="relative hidden lg:block w-full"
+          style={{height: "30rem"}}
         >
           <div
             className="z-10 absolute w-full h-full"
