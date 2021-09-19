@@ -6,9 +6,13 @@ const Poster = ({src, alt, title, subtitle, isDark}) => {
         <div className="w-full h-40 md:h-52 lg:h-72">
           <img src={src} alt={alt} className="w-full h-full rounded-md" />
         </div>
-        <div className="text-xs md:text-md font-semibold {`isDark ? text-white : text-gray-300`}">
-            <h3>{title}</h3>
-            <h5>{subtitle}</h5>
+        <div>
+          <h3 className={`text-sm md:text-base lg:text-lg font-semibold ${isDark ? "text-white" : "text-bms-700"}`}>
+            {title}
+          </h3>
+          <h5 className={`text-xs md:text-sm lg:text-sm ${isDark ? "text-gray-400" : "text-gray-300"}`}>
+            {subtitle}
+          </h5>
         </div>
       </div>
     );

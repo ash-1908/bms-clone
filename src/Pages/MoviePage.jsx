@@ -120,6 +120,7 @@ const MoviePage = () => {
               title=""
               subtitle=""
               isDark={false}
+              home={false}
             />
             <div className="mb-8 w-full h-0.5 bg-gray-200 rounded-full" />
           </div>

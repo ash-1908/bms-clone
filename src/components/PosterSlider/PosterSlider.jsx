@@ -6,7 +6,8 @@ import Slider from "react-slick";
 const PosterSlider = (props) => {
   return (
     <>
-      <div className="w-full lg:w-5/6 mx-auto">
+      <div className={`w-full 
+      ${props.home ? "lg:w-5/6" : "w-full"} mx-auto`}>
         <h3
           className={`lg:text-2xl lg:font-bold text-lg font-semibold mx-1 md:mx-2 lg:mx-4
             ${props.isDark ? "text-white" : "text-bms-700"}`}
@@ -23,7 +24,7 @@ const PosterSlider = (props) => {
         <div>
           <Slider {...settings}>
             {props.images.map((image) => (
-              <Poster {...image} />
+              <Poster {...image} isDark={true} />
             ))}
           </Slider>
         </div>

@@ -20,6 +20,7 @@ const HomePage = () => {
           title="Premiere"
           subtitle="Brand new releases every Friday"
           isDark="true"
+          home={true}
         />
       </div>
     </div>
