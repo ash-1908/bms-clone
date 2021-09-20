@@ -9,7 +9,7 @@ const PosterSlider = (props) => {
       <div className={`w-full 
       ${props.home ? "lg:w-5/6" : "w-full"} mx-auto`}>
         <h3
-          className={`lg:text-2xl lg:font-bold text-lg font-semibold mx-1 md:mx-2 lg:mx-4
+          className={`lg:text-2xl lg:font-bold text-lg font-semibold mx-1 md:mx-2 lg:mx-4 my-3
             ${props.isDark ? "text-white" : "text-bms-700"}`}
         >
           {props.title}
@@ -24,7 +24,7 @@ const PosterSlider = (props) => {
         <div>
           <Slider {...settings}>
             {props.images.map((image) => (
-              <Poster {...image} isDark={true} />
+              <Poster {...image} isDark={props.isDark} />
             ))}
           </Slider>
         </div>

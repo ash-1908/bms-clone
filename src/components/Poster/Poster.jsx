@@ -13,13 +13,13 @@ const Poster = (props) => {
         <div>
           <h3
             className={`text-sm md:text-base lg:text-lg font-semibold 
-            ${props.isDark ? "text-white" : "text-bms-700"}`}
+            ${props.isDark ? "text-white" : "text-black"}`}
           >
             {props.original_title}
           </h3>
           <h5
             className={`text-xs md:text-sm lg:text-sm ${
-              props.isDark ? "text-gray-400" : "text-gray-300"
+              props.isDark ? "text-gray-400" : "text-gray-500"
             }`}
           >
             Released on: {props.release_date}
