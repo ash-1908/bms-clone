@@ -1,35 +1,35 @@
-import React, { createContext } from "react";
+import React, { createContext, useState } from "react";
 
 export const DefaultContext = createContext();
 
 const DefaultProvider = ({ children }) => {
-  const [hero, setHero] = useState({
+  const [hero, setHero] = useState([{
     poster_path: "",
-  });
+  }]);
 
-  const [playing, setPlaying] = useState({
+  const [playing, setPlaying] = useState([{
     poster_path: "",
     original_title: "",
     release_date: "",
-  });
+  }]);
 
-  const [popular, setPopular] = useState({
+  const [popular, setPopular] = useState([{
     poster_path: "",
     original_title: "",
     release_date: "",
-  });
+  }]);
 
-  const [topRated, setTopRated] = useState({
+  const [topRated, setTopRated] = useState([{
     poster_path: "",
     original_title: "",
     release_date: "",
-  });
+  }]);
 
-  const [upcoming, setUpcoming] = useState({
+  const [upcoming, setUpcoming] = useState([{
     poster_path: "",
     original_title: "",
     release_date: "",
-  });
+  }]);
 
   return (
     <DefaultContext.Provider

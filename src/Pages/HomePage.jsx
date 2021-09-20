@@ -1,22 +1,9 @@
-import React, {useState, useEffect} from "react";
+import React, { useContext } from "react";
 import EntertainmentCardSlider from "../Components/Entertainment/EntertainmentCard";
 import PosterSlider from "../Components/PosterSlider/PosterSlider";
-import axios from "axios";
-
+import { DefaultContext } from "../Context/Default.context";
 const HomePage = () => {
-  const [latestMovies, setLatestMovies] = useState([]);
-
-  useEffect(()=>{
-    const fetchLatestMovies = async() => {
-      const getLatestMovies = await axios.get("/movie/now_playing");
-      
-      setLatestMovies(getLatestMovies.data.results);
-    }
-
-    fetchLatestMovies();
-  }, [])
-
-
+  const {playing, popular, topRated, upcoming} = useContext(DefaultContext);
   return (
     <div>
       <EntertainmentCardSlider />
@@ -30,13 +17,35 @@ const HomePage = () => {
             />
           </div>
           <PosterSlider
-            images={latestMovies}
+            images={playing}
             title="Premiere"
             subtitle="Brand new releases every Friday"
-            isDark="true"
+            isDark={true}
             home={true}
           />
         </div>
+        <PosterSlider
+          images={popular}
+          title="Popular Movies"
+          subtitle=""
+          isDark={false}
+          home={true}
+        />
+        <PosterSlider
+          images={topRated}
+          title="Top Rated Movies"
+          subtitle=""
+          isDark={false}
+          home={true}
+        />
+        
+        <PosterSlider
+          images={upcoming}
+          title="Upcoming Movies"
+          subtitle=""
+          isDark={false}
+          home={true}
+        />
       </div>
     </div>
   );
