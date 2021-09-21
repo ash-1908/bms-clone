@@ -7,6 +7,27 @@ export default function PaymentModal({ isOpen, setIsOpen, price}) {
     setIsOpen(false);
   }
 
+  const launchRazorpay = () => {
+    setIsOpen(false);
+    let options = {
+      key: process.env.REACT_APP_PAYMENTKEY,
+      amount: price * 100,
+      currency: "INR",
+      name: "Book My Show Clone",
+      description: "Payment testing",
+      image:
+        "https://s2.qwant.com/thumbr/0x380/7/2/ca65f8c28df2768fa5ffae272b42a00104ea7f06c6f49966d95da0421bc180/book-my-show-logo-png-9.png?u=https%3A%2F%2Fclipground.com%2Fimages%2Fbook-my-show-logo-png-9.png&q=0&b=1&p=0&a=0",
+      handler: ()=>{
+        alert("Payment successfull");
+      },
+      theme: {color: "#c4242d"},
+    };
+
+    const RazorPay = new window.Razorpay(options);
+
+    RazorPay.open();
+  }
+
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
@@ -62,7 +83,7 @@ export default function PaymentModal({ isOpen, setIsOpen, price}) {
                   <button
                     type="button"
                     className="mr-5 inline-flex justify-center px-4 py-2 text-sm font-medium text-blue-900 bg-blue-100 border border-transparent rounded-md hover:bg-red-700 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
-                    onClick={closeModal}
+                    onClick={launchRazorpay}
                   >
                     Pay Rs {price}
                   </button>
