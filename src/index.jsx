@@ -5,6 +5,7 @@ import "./index.css";
 import App from "./App";
 import DefaultProvider from "./Context/Default.context"
 import MovieProvider from "./Context/Movie.context";
+import ScrollToTop from "./ScrollToTop/ScrollToTop";
 
 
 ReactDOM.render(
@@ -12,7 +13,9 @@ ReactDOM.render(
     <BrowserRouter>
       <DefaultProvider>
         <MovieProvider>
-          <App />
+          <ScrollToTop>
+            <App />
+          </ScrollToTop>
         </MovieProvider>
       </DefaultProvider>
     </BrowserRouter>

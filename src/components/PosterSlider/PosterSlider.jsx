@@ -2,6 +2,7 @@ import React from "react";
 import { settings } from "../configs/PosterSlider.config";
 import Poster from "../Poster/Poster";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 
 const PosterSlider = (props) => {
   return (
@@ -24,7 +25,10 @@ const PosterSlider = (props) => {
         <div>
           <Slider {...settings}>
             {props.images.map((image) => (
+            <Link to={`/movie/${image.id}`}>
+
               <Poster {...image} isDark={props.isDark} />
+              </Link>
             ))}
           </Slider>
         </div>

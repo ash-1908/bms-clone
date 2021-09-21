@@ -1,6 +1,7 @@
 import React from "react";
 import { BiChevronRight, BiSearchAlt, BiChevronDown } from "react-icons/bi";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 const NavSm = () => {
   return (
@@ -38,12 +39,15 @@ const NavLg = () => {
     <div className="flex justify-between text-white w-10/12 mx-auto p-2">
       <div className="flex justify-between items-center w-7/12 gap-5">
         <div className="w-30 h-8">
+            <Link to={`/`}>
+          
           <img
             src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
             alt="BookMyShow logo"
             className="w-full h-full"
             
           />
+          </Link>
         </div>
         <div className="flex bg-white w-full p-1 items-center rounded-md">
           <BiSearchAlt className="text-black text-lg mx-2" />
