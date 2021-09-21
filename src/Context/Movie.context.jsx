@@ -11,8 +11,15 @@ const MovieProvider = ({ children }) => {
     backdrop_path: "",
   });
 
+  const [cast, setCast] = useState([{
+    id: "",
+    original_name: "",
+    character: "",
+    profile_path: ""
+  }]);
+
   return (
-    <MovieContext.Provider value={{ movie, setMovie }}>
+    <MovieContext.Provider value={{ movie, setMovie, cast, setCast }}>
       {children}
     </MovieContext.Provider>
   );

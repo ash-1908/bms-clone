@@ -1,15 +1,18 @@
-import React from "react";
+import React, {useContext} from "react";
 import { BiSearchAlt, BiChevronDown } from "react-icons/bi";
 import {AiOutlineShareAlt} from "react-icons/ai"
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import { MovieContext } from "../../Context/Movie.context";
 
 const NavSm = () => {
+  const {movie} = useContext(MovieContext);
+
   return (
     <>
       <div className="w-full p-3">
         <div className="flex justify-between items-start">
-          <h1 className="text-xl font-semibold text-white">Movie Title</h1>
+          <h1 className="text-xl font-semibold text-white">{movie.original_title}</h1>
 
           <div className="text-2xl text-white">
             <AiOutlineShareAlt />

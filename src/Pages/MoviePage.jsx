@@ -1,43 +1,16 @@
-import React from "react";
+import React, {useContext} from "react";
 import MovieHero from "../Components/MovieHero/MovieHero.component";
 import { FaCcPaypal } from "react-icons/fa";
 import Cast from "../Components/Cast/Cast";
 import PosterSlider from "../Components/PosterSlider/PosterSlider"
-import {TempImages} from "../Components/TempImages/TempImages"
+import { MovieContext } from "../Context/Movie.context";
+import { DefaultContext } from "../Context/Default.context";
+
 
 const MoviePage = () => {
-  const images = [
-    {
-      src: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/akshay-kumar-94-20-12-2017-04-36-47.jpg",
-      name: "Akshay Kumar",
-      role: "Superman",
-    },
-    {
-      src: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/akshay-kumar-94-20-12-2017-04-36-47.jpg",
-      name: "Akshay Kumar",
-      role: "Superman",
-    },
-    {
-      src: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/huma-qureshi-30360-24-03-2017-13-58-06.jpg",
-      name: "Huma",
-      role: "Superwoman",
-    },
-    {
-      src: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/akshay-kumar-94-20-12-2017-04-36-47.jpg",
-      name: "Akshay Kumar",
-      role: "Superman",
-    },
-    {
-      src: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/akshay-kumar-94-20-12-2017-04-36-47.jpg",
-      name: "Akshay Kumar",
-      role: "Superman",
-    },
-    {
-      src: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/huma-qureshi-30360-24-03-2017-13-58-06.jpg",
-      name: "Huma",
-      role: "Superwoman",
-    },
-  ];
+  const {movie, cast} = useContext(MovieContext)
+  const { popular, topRated, upcoming } = useContext(DefaultContext);
+
 
   return (
     <>
@@ -48,20 +21,7 @@ const MoviePage = () => {
             <h2 className="my-5 text-2xl font-bold text-black">
               About the movie
             </h2>
-            <p className="text-md text-black">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-              voluptatem ullam atque, numquam architecto soluta dolores.
-              Repudiandae, quibusdam pariatur sint vel ab, consequuntur vitae
-              odit quas saepe minus mollitia tempore assumenda adipisci possimus
-              magnam recusandae molestias. Id sequi perferendis repellat saepe
-              deleniti maiores quaerat explicabo ab magni, consequatur nihil
-              nostrum provident eveniet beatae soluta tempora facere sed,
-              dolorum corrupti fugit ut optio. Quis id, dolorum tempora, at
-              minima repellat illum esse expedita ducimus eaque laudantium
-              eligendi odio adipisci aliquid error et autem necessitatibus
-              assumenda inventore dolores. Qui praesentium alias fuga eius rerum
-              reiciendis. Asperiores saepe optio sequi ipsa officia vitae.
-            </p>
+            <p className="text-md text-black">{movie.overview}</p>
             <div className="my-8 w-full h-0.5 bg-gray-200 rounded-full" />
           </div>
           <div>
@@ -96,7 +56,7 @@ const MoviePage = () => {
             <h2 className="my-5 text-2xl font-bold text-black">
               Cast and Crew
             </h2>
-            <Cast images={images} />
+            <Cast images={cast} />
             <div className="my-8 w-full h-0.5 bg-gray-200 rounded-full" />
           </div>
           <div>
@@ -104,7 +64,7 @@ const MoviePage = () => {
               You might also like
             </h2>
             <PosterSlider
-              images={TempImages}
+              images={popular}
               title=""
               subtitle=""
               isDark={false}
@@ -112,11 +72,20 @@ const MoviePage = () => {
             <div className="mb-8 w-full h-0.5 bg-gray-200 rounded-full" />
           </div>
           <div>
-            <h2 className="my-5 text-2xl font-bold text-black">
-              BMS Xclusive
-            </h2>
+            <h2 className="my-5 text-2xl font-bold text-black">BMS Xclusive</h2>
             <PosterSlider
-              images={TempImages}
+              images={topRated}
+              title=""
+              subtitle=""
+              isDark={false}
+              home={false}
+            />
+            <div className="mb-8 w-full h-0.5 bg-gray-200 rounded-full" />
+          </div>
+          <div>
+            <h2 className="my-5 text-2xl font-bold text-black">Coming Soon</h2>
+            <PosterSlider
+              images={upcoming}
               title=""
               subtitle=""
               isDark={false}
