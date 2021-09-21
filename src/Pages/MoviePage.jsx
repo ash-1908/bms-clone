@@ -1,8 +1,8 @@
 import React, {useContext} from "react";
-import MovieHero from "../Components/MovieHero/MovieHero.component";
+import MovieHero from "../components/MovieHero/MovieHero.component";
 import { FaCcPaypal } from "react-icons/fa";
-import Cast from "../Components/Cast/Cast";
-import PosterSlider from "../Components/PosterSlider/PosterSlider"
+import Cast from "../components/Cast/Cast";
+import PosterSlider from "../components/PosterSlider/PosterSlider"
 import { MovieContext } from "../Context/Movie.context";
 import { DefaultContext } from "../Context/Default.context";
 

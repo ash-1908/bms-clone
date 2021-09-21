@@ -1,5 +1,5 @@
 import React from "react";
-import DefaultLayout from "../Layouts/Default.layout";
+import DefaultLayout from "../layouts/Default.layout";
 import { Route } from "react-router-dom";
 
 export const DefaultHOC = ({ component: Component, ...props }) => {

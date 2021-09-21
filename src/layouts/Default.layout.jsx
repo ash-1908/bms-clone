@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../Components/Navbar/Navbar.component";
-import SimpleSlider from "../Components/Carousal/Hero";
-import Category from "../Components/Category/Category";
+import Navbar from "../components/Navbar/Navbar.component";
+import SimpleSlider from "../components/Carousal/Hero";
+import Category from "../components/Category/Category";
 
 
 const DefaultLayout = (props) => {

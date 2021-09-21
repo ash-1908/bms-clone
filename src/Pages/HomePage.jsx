@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import EntertainmentCardSlider from "../Components/Entertainment/EntertainmentCard";
-import PosterSlider from "../Components/PosterSlider/PosterSlider";
+import EntertainmentCardSlider from "../components/Entertainment/EntertainmentCard";
+import PosterSlider from "../components/PosterSlider/PosterSlider";
 import { DefaultContext } from "../Context/Default.context";
 const HomePage = () => {
   const {playing, popular, topRated, upcoming} = useContext(DefaultContext);
